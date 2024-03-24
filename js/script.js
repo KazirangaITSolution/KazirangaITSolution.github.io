@@ -118,3 +118,20 @@ $(document).ready(function(){
   document.onscroll = scroll;
 
 });
+
+
+
+window.addEventListener('scroll', function() {
+    var logo = document.getElementById('main-logo');
+    var altLogo = document.getElementById('white-logo');
+    var scrollPosition = window.scrollY;
+    // Change logo when scroll position is greater than 100 pixels
+    if(scrollPosition > 100) {
+      logo.style.display = 'none';
+      altLogo.style.display = 'block';
+    } else {
+      logo.style.display = 'block';
+      altLogo.style.display = 'none';
+    }
+  });
+  
